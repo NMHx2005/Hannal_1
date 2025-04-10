@@ -73,7 +73,7 @@ const Header: React.FC = () => {
         <div className="header__content">
           <div className="header__logo">
             <Link to="/">
-              <img src="./public/images/Logo Thien Phu.png" alt="Thiên Phú Chế Tạo Máy" />
+              <img src="./images/Logo Thien Phu.png" alt="Thiên Phú Chế Tạo Máy" />
             </Link>
           </div>
           

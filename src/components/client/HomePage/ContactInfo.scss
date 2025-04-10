@@ -1,0 +1,29 @@
+
+.location {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.location i {
+  color: #007bff;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.location h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.location p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.divider {
+  border-bottom: 1px dashed #ccc;
+  margin: 10px 0;
+}

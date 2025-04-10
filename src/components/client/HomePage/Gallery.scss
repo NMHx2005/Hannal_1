@@ -1,0 +1,38 @@
+.gallery {
+  display: flex;
+  // gap: 10px;
+  flex-wrap: wrap;
+  max-width: 800px;
+  width: 100%;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  width: calc(50% - 10px);
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  // display: block;
+}
+
+.gallery-item .play-button {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: white;
+}
+
+.gallery-item p {
+  text-align: center;
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #333;
+}

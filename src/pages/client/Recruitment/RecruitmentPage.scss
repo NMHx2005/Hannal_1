@@ -1,0 +1,105 @@
+.recruitment {
+  .bannerchild {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/recruitment/banner-recruitment.jpg') no-repeat center;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0;
+
+    .container {
+      max-width: 800px;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 48px;
+      font-weight: 700;
+      margin: 0 0 20px;
+    }
+
+    p {
+      color: #fff;
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+
+  .breadcrumb {
+    padding: 15px 0;
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      li {
+        color: #666;
+        font-size: 14px;
+
+        &:not(:last-child):after {
+          content: "/";
+          margin-left: 10px;
+          color: #999;
+        }
+
+        a {
+          color: #333;
+          text-decoration: none;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #0066cc;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .recruitment {
+    .bannerchild {
+      height: 200px;
+      padding: 0 15px;
+
+      h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .breadcrumb {
+      padding: 10px 0;
+
+      ul {
+        gap: 5px;
+
+        li {
+          font-size: 13px;
+
+          &:not(:last-child):after {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+} 

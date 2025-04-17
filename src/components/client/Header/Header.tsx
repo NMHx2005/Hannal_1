@@ -33,13 +33,14 @@ const Header: React.FC = () => {
   const menuItems: MenuItem[] = [
     { key: 'home', label: 'Trang chủ', link: '/' },
     { key: 'about', label: 'Giới thiệu', link: '/about' },
-    { 
-      key: 'products', 
+    {
+      key: 'products',
       label: 'Sản phẩm',
+      link: '/products',
       children: [
         { key: 'conveyor', label: 'Băng tải', link: '/products/conveyor' },
         { key: 'workbench', label: 'Bàn thao tác', link: '/products/workbench' },
-      ]
+      ],
     },
     { key: 'news', label: 'Tin tức', link: '/news' },
     { key: 'services', label: 'Dịch vụ', link: '/services' },
@@ -53,16 +54,16 @@ const Header: React.FC = () => {
       if (item.children) {
         return {
           key: item.key,
-          label: item.label,
+          label: item.link ? <Link to={item.link}>{item.label}</Link> : item.label,
           children: item.children.map((child: MenuItem) => ({
             key: child.key,
-            label: <Link to={child.link || '/'}>{child.label}</Link>
-          }))
+            label: <Link to={child.link || '/'}>{child.label}</Link>,
+          })),
         };
       }
       return {
         key: item.key,
-        label: <Link to={item.link || '/'}>{item.label}</Link>
+        label: <Link to={item.link || '/'}>{item.label}</Link>,
       };
     });
   };
@@ -76,25 +77,25 @@ const Header: React.FC = () => {
               <img src="./images/Logo Thien Phu.png" alt="Thiên Phú Chế Tạo Máy" />
             </Link>
           </div>
-          
+
           <div className="header__menu">
             <Menu mode="horizontal" items={renderMenuItems(menuItems)} />
           </div>
-          
+
           <div className="header__mobile-button">
-            <Button 
-              type="text" 
-              icon={<MenuOutlined />} 
+            <Button
+              type="text"
+              icon={<MenuOutlined />}
               onClick={() => setMobileMenuVisible(true)}
             />
           </div>
-          
+
           <div className="header__contact">
             <a href="tel:0966695386">0966 695 386</a>
           </div>
         </div>
       </div>
-      
+
       <Drawer
         title="Menu"
         placement="right"
@@ -107,4 +108,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header; 
+export default Header;
